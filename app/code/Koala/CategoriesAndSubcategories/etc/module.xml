@@ -1,3 +1,8 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+<<<<<<< HEAD:app/code/Koala/CategoriesAndSubcategories/etc/module.xml
     <module name="Koala_CategoriesAndSubcategories" setup_version="1.0.0"/>
+=======
+    <module name="KoalaSport_Store" setup_version="1.0.0"/>
+    <module name="CreateProducts" setup_version="1.0.0"/>
+>>>>>>> d0e84964b56a04c2fcdc6e036bed3d461e025682:app/code/Koala/etc/module.xml
 </config>
