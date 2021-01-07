@@ -117,24 +117,24 @@ class CreateCategories implements DataPatchInterface
     }
 
     /**
-     * Method for create subcategorie Roupas
+     * Method for create subcategorie Coisas
      *
      * @return array
      */
     private function subcategoriesOfKoalaStore(): array
     {
         $category = $this->categoryFactory->create();
-        $parentCategory = $category->loadByAttribute('url_key', 'roupas');
+        $parentCategory = $category->loadByAttribute('url_key', 'coisas');
         $categories = [];
         $categories[] = [
-            'name' => 'Roupas',
-            'url_key' => 'roupas',
+            'name' => 'Coisas',
+            'url_key' => 'coisas',
             'active' => true,
             'is_anchor' => true,
             'include_in_menu' => true,
             'display_mode' => 'PRODUCTS_AND_PAGE',
             'is_active' => true,
-            'parent_id' => $parentCategory->getId()
+            'parent_id' => $parentCategory
         ];
         return $categories;
     }
