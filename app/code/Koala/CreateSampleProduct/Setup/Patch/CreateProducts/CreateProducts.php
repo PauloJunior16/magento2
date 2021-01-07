@@ -51,6 +51,7 @@ $options = array(
         "is_require" => 0
     )
 );
+
 foreach ($options as $arrayOption) {
     $product->setHasOptions(1);
     $product->getResource()->save($product);
