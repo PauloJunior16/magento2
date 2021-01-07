@@ -66,4 +66,7 @@ atlassian*
 !/vendor/.htaccess
 /generated/*
 !/generated/.htaccess
+<<<<<<< HEAD
+=======
 
+>>>>>>> 9987d41f5d8151463cea5f66848de6334397e2c2

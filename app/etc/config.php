@@ -314,7 +314,7 @@ return [
         'Vertex_Tax' => 1,
         'Vertex_AddressValidationApi' => 1,
         'Vertex_AddressValidation' => 1,
-        'Yotpo_Yotpo' => 1,
+        'Yotpo_Yotpo' => 1
     ],
     'scopes' => [
         'websites' => [
@@ -324,7 +324,7 @@ return [
                 'name' => 'Koala',
                 'sort_order' => '0',
                 'default_group_id' => '0',
-                'is_default' => '0',
+                'is_default' => '0'
             ],
             'koalastore' => [
                 'website_id' => '1',
@@ -332,7 +332,7 @@ return [
                 'name' => 'Koala Sports',
                 'sort_order' => '0',
                 'default_group_id' => '1',
-                'is_default' => '1',
+                'is_default' => '1'
             ],
             'doctor_fit' => [
                 'website_id' => '3',
@@ -340,8 +340,8 @@ return [
                 'name' => 'Doctor Fit',
                 'sort_order' => '0',
                 'default_group_id' => '3',
-                'is_default' => '0',
-            ],
+                'is_default' => '0'
+            ]
         ],
         'groups' => [
             0 => [
@@ -350,7 +350,7 @@ return [
                 'name' => 'Default',
                 'root_category_id' => '0',
                 'default_store_id' => '0',
-                'code' => 'default',
+                'code' => 'default'
             ],
             1 => [
                 'group_id' => '1',
@@ -358,7 +358,7 @@ return [
                 'name' => 'Main Koala Store',
                 'root_category_id' => '6',
                 'default_store_id' => '1',
-                'code' => 'koala_store',
+                'code' => 'koala_store'
             ],
             3 => [
                 'group_id' => '3',
@@ -366,8 +366,8 @@ return [
                 'name' => 'Doctor Fit',
                 'root_category_id' => '3',
                 'default_store_id' => '4',
-                'code' => 'doctor_fit',
-            ],
+                'code' => 'doctor_fit'
+            ]
         ],
         'stores' => [
             'admin' => [
@@ -377,7 +377,7 @@ return [
                 'group_id' => '0',
                 'name' => 'Admin',
                 'sort_order' => '0',
-                'is_active' => '1',
+                'is_active' => '1'
             ],
             'br' => [
                 'store_id' => '1',
@@ -386,7 +386,7 @@ return [
                 'group_id' => '1',
                 'name' => 'Brazilian Portuguese',
                 'sort_order' => '1',
-                'is_active' => '1',
+                'is_active' => '1'
             ],
             'en' => [
                 'store_id' => '3',
@@ -395,7 +395,7 @@ return [
                 'group_id' => '1',
                 'name' => 'English',
                 'sort_order' => '2',
-                'is_active' => '1',
+                'is_active' => '1'
             ],
             'home' => [
                 'store_id' => '4',
@@ -404,9 +404,9 @@ return [
                 'group_id' => '3',
                 'name' => 'Doctor Fit View',
                 'sort_order' => '0',
-                'is_active' => '1',
-            ],
-        ],
+                'is_active' => '1'
+            ]
+        ]
     ],
     'themes' => [
         'frontend/Magento/blank' => [
@@ -416,7 +416,7 @@ return [
             'is_featured' => '0',
             'area' => 'frontend',
             'type' => '0',
-            'code' => 'Magento/blank',
+            'code' => 'Magento/blank'
         ],
         'adminhtml/Magento/backend' => [
             'parent_id' => null,
@@ -425,7 +425,7 @@ return [
             'is_featured' => '0',
             'area' => 'adminhtml',
             'type' => '0',
-            'code' => 'Magento/backend',
+            'code' => 'Magento/backend'
         ],
         'frontend/Magento/luma' => [
             'parent_id' => 'Magento/blank',
@@ -434,8 +434,8 @@ return [
             'is_featured' => '0',
             'area' => 'frontend',
             'type' => '0',
-            'code' => 'Magento/luma',
-        ],
+            'code' => 'Magento/luma'
+        ]
     ],
     'system' => [
         'default' => [
