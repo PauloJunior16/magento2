@@ -4,3 +4,4 @@
     'Koala_CreateSampleProduct',
     __DIR__
 );
+
