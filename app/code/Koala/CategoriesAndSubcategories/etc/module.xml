@@ -1,3 +1,17 @@
+<<<<<<< HEAD:app/code/Koala/CategoriesAndSubcategories/etc/module.xml
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
     <module name="Koala_CategoriesAndSubcategories" setup_version="1.0.0"/>
 </config>
+=======
+<?php
+\Magento\Framework\Component\ComponentRegistrar::register(
+    \Magento\Framework\Component\ComponentRegistrar::MODULE,
+    'KoalaSport_Store',
+    __DIR__
+);
+\Magento\Framework\Component\ComponentRegistrar::register(
+    \Magento\Framework\Component\ComponentRegistrar::MODULE,
+    'DoctorFit_Store',
+    __DIR__
+);
+>>>>>>> 2a4e16b5c39868558e152e9c775e827e766b7f12:app/code/Koala/etc/module.xml
