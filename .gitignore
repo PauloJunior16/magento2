@@ -66,6 +66,11 @@ atlassian*
 !/vendor/.htaccess
 /generated/*
 !/generated/.htaccess
+var   
+var/  
+var/log/  
+var/log  
+var/
 <<<<<<< HEAD
 =======
 
