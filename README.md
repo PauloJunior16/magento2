@@ -14,4 +14,4 @@ Nginx 1.18
 Gustavo Menezes, Karen Avelar e Paulo Junior.
 
 ## Status
-Finalizado.
+Em progresso.
