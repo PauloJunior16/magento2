@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Doctor\CreateCategories\Setup\Patch\Data;
+namespace Doctor\CategoriesAndSubcategories\Setup\Patch\Data;
 
 use Magento\Catalog\Helper\DefaultCategory;
 use Magento\Catalog\Model\CategoryFactory;
@@ -8,6 +8,11 @@ use Magento\Catalog\Model\CategoryRepository;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 
+/**
+ * Class CreateCategories
+ *
+ * @package Doctor\CategoriesAndSubcategories\Setup\Patch\Data
+ */
 class CreateCategories implements DataPatchInterface
 {
     /**
@@ -15,23 +20,18 @@ class CreateCategories implements DataPatchInterface
      */
     private $setup;
 
-    /**
-     * @var CategoryFactory
-     */
+    /** @var CategoryFactory */
     private $categoryFactory;
 
-    /**
-     * @var DefaultCategory
-     */
+    /** @var DefaultCategory */
     private $defaultCategoryHelper;
 
-    /**
-     * @var CategoryRepository
-     */
+    /** @var CategoryRepository */
     private $categoryRepository;
 
     /**
-     * CreateCategories constructor.
+     * CreateAllCategories constructor.
+     *
      * @param ModuleDataSetupInterface $setup
      * @param CategoryFactory $categoryFactory
      * @param DefaultCategory $defaultCategoryHelper
@@ -50,7 +50,7 @@ class CreateCategories implements DataPatchInterface
     }
 
     /**
-     * @return array
+     * @inheritDoc
      */
     public static function getDependencies(): array
     {
@@ -58,7 +58,7 @@ class CreateCategories implements DataPatchInterface
     }
 
     /**
-     * @return array
+     * @inheritDoc
      */
     public function getAliases(): array
     {
@@ -66,99 +66,100 @@ class CreateCategories implements DataPatchInterface
     }
 
     /**
-     * @return CreateCategories|void
+     * @inheritDoc
+     * @throws \Magento\Framework\Exception\CouldNotSaveException
      */
-    public function apply()
+    public function apply(): void
     {
         $this->setup->startSetup();
-        $this->createCategories($this->categoryCerealsBr());
-        $this->createCategories($this->categoryGrainsBr());
-        $this->createCategories($this->categoryTeasBr());
+        $this->createCategories($this->categoryDoctorFit());
+        $this->createCategories($this->subcategoriesOfDoctorFit());
         $this->setup->endSetup();
     }
 
     /**
+     * Method for create all categories and subcategories
+     *
      * @param array $categories
      * @throws \Magento\Framework\Exception\CouldNotSaveException
      */
-    private function createCategories(array $categories)
+    private function createCategories(array $categories): void
     {
         foreach ($categories as $item) {
             $category = $this->categoryFactory->create();
             $category
                 ->setData($item)
-                ->setStoreId(1)
                 ->setAttributeSetId($category->getDefaultAttributeSetId());
             $this->categoryRepository->save($category);
         }
     }
 
     /**
+     * Method for create category DoctorFit
      * @return array
      */
-    private function categoryCerealsBr():array
+    private function categoryDoctorFit(): array
     {
         $parentId = $this->defaultCategoryHelper->getId();
         $parentCategory = $this->categoryFactory->create();
         $parentCategory = $parentCategory->load($parentId);
         $categories = [];
-
         $categories[] = [
-          'name' => 'Cereais',
-          'url_key' => 'cereais_doctor',
-          'is_active' => true,
-          'is_anchor' => true,
-          'include_in_menu' => true,
-          'display_mode' => 'PRODUCTS_AND_PAGE',
-          'parent_id' =>$parentCategory->getId()
-        ];
-
-        return $categories;
-    }
-
-    /**
-     * @return array
-     */
-    private function categoryGrainsBr():array
-    {
-        $parentId = $this->defaultCategoryHelper->getId();
-        $parentCategory = $this->categoryFactory->create();
-        $parentCategory = $parentCategory->load($parentId);
-        $categories = [];
-
-        $categories[] = [
-            'name' => 'Grãos',
-            'url_key' => 'graos_doctor',
+            'name' => 'Doctor Fit',
+            'url_key' => 'doctor_fit',
             'is_active' => true,
             'is_anchor' => true,
             'include_in_menu' => true,
             'display_mode' => 'PRODUCTS_AND_PAGE',
-            'parent_id' =>$parentCategory->getId()
+            'parent_id' => $parentCategory->getId()
         ];
-
         return $categories;
     }
 
     /**
+     * Method for create subcategorie Proteínas
+     *
      * @return array
      */
-    private function categoryTeasBr():array
+    private function subcategoriesOfDoctorFit(): array
     {
-        $parentId = $this->defaultCategoryHelper->getId();
-        $parentCategory = $this->categoryFactory->create();
-        $parentCategory = $parentCategory->load($parentId);
+        $category = $this->categoryFactory->create();
+        $parentCategory = $category->loadByAttribute('url_key', 'proteinas');
         $categories = [];
-
         $categories[] = [
-            'name' => 'Chás',
-            'url_key' => 'chas_doctor',
-            'is_active' => true,
+            'name' => 'Proteínas',
+            'url_key' => 'proteinas',
+            'active' => true,
             'is_anchor' => true,
             'include_in_menu' => true,
             'display_mode' => 'PRODUCTS_AND_PAGE',
-            'parent_id' =>$parentCategory->getId()
+            'is_active' => true,
+            'parent_id' => $parentCategory
         ];
+        return $categories;
+    }
 
+    /**
+     * Method for create subcategorie Vitaminas
+     *
+     * @return array
+     */
+
+    private function subcategoriesOfVitaminas(): array
+    {
+        $category = $this->categoryFactory->create();
+        $parentCategory = $category->loadByAttribute('url_key', 'vitaminas');
+        $categories = [];
+        $categories[] = [
+            'name' => 'Vitaminas',
+            'url_key' => 'vitaminas',
+            'active' => true,
+            'is_anchor' => true,
+            'include_in_menu' => true,
+            'display_mode' => 'PRODUCTS_AND_PAGE',
+            'is_active' => true,
+            'parent_id' => $parentCategory
+        ];
         return $categories;
     }
 }
