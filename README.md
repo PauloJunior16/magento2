@@ -5,7 +5,7 @@ Neste projeto foi realizado a criação de dois websites utilizando Magento 2 e 
 O segundo website é o "Doctor Fit" ele tem uma store view e seu menu é diferente do primeiro website.
 
 ## Ferramentas Utilizadas:
-Magento 2,
+Magento 2.4.1,
 MySQL 8.0,
 PHP 7.4,
 Nginx 1.18
@@ -14,4 +14,4 @@ Nginx 1.18
 Gustavo Menezes, Karen Avelar e Paulo Junior.
 
 ## Status
-Em progresso.
+Em Andamento.
