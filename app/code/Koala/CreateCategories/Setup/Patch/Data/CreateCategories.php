@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Koala\CategoriesAndSubcategories\Setup\Patch\Data;
+namespace Koala\CreateCategories\Setup\Patch\Data;
 
 use Magento\Catalog\Helper\DefaultCategory;
 use Magento\Catalog\Model\CategoryFactory;
@@ -8,11 +8,6 @@ use Magento\Catalog\Model\CategoryRepository;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 
-/**
- * Class CreateCategories
- *
- * @package Koala\CategoriesAndSubcategories\Setup\Patch\Data
- */
 class CreateCategories implements DataPatchInterface
 {
     /**
@@ -20,18 +15,23 @@ class CreateCategories implements DataPatchInterface
      */
     private $setup;
 
-    /** @var CategoryFactory */
+    /**
+     * @var CategoryFactory
+     */
     private $categoryFactory;
 
-    /** @var DefaultCategory */
+    /**
+     * @var DefaultCategory
+     */
     private $defaultCategoryHelper;
 
-    /** @var CategoryRepository */
+    /**
+     * @var CategoryRepository
+     */
     private $categoryRepository;
 
     /**
-     * CreateAllCategories constructor.
-     *
+     * CreateCategories constructor.
      * @param ModuleDataSetupInterface $setup
      * @param CategoryFactory $categoryFactory
      * @param DefaultCategory $defaultCategoryHelper
@@ -50,7 +50,7 @@ class CreateCategories implements DataPatchInterface
     }
 
     /**
-     * @inheritDoc
+     * @return array
      */
     public static function getDependencies(): array
     {
@@ -58,7 +58,7 @@ class CreateCategories implements DataPatchInterface
     }
 
     /**
-     * @inheritDoc
+     * @return array
      */
     public function getAliases(): array
     {
@@ -66,76 +66,99 @@ class CreateCategories implements DataPatchInterface
     }
 
     /**
-     * @inheritDoc
-     * @throws \Magento\Framework\Exception\CouldNotSaveException
+     * @return CreateCategories|void
      */
-    public function apply(): void
+    public function apply()
     {
         $this->setup->startSetup();
-        $this->createCategories($this->categoryKoalaStore());
-        $this->createCategories($this->subcategoriesOfKoalaStore());
+        $this->createCategories($this->categoryClothesBr());
+        $this->createCategories($this->categoryShoesBr());
+        $this->createCategories($this->categoryBagsBr());
         $this->setup->endSetup();
     }
 
     /**
-     * Method for create all categories and subcategories
-     *
      * @param array $categories
      * @throws \Magento\Framework\Exception\CouldNotSaveException
      */
-    private function createCategories(array $categories): void
+    private function createCategories(array $categories)
     {
         foreach ($categories as $item) {
             $category = $this->categoryFactory->create();
             $category
                 ->setData($item)
+                ->setStoreId(1)
                 ->setAttributeSetId($category->getDefaultAttributeSetId());
             $this->categoryRepository->save($category);
         }
     }
 
     /**
-     * Method for create category KoalaStore
      * @return array
      */
-    private function categoryKoalaStore(): array
+    private function categoryClothesBr():array
     {
         $parentId = $this->defaultCategoryHelper->getId();
         $parentCategory = $this->categoryFactory->create();
         $parentCategory = $parentCategory->load($parentId);
         $categories = [];
+
         $categories[] = [
-            'name' => 'Koala Store',
-            'url_key' => 'koalastore',
-            'is_active' => true,
-            'is_anchor' => true,
-            'include_in_menu' => true,
-            'display_mode' => 'PRODUCTS_AND_PAGE',
-            'parent_id' => $parentCategory->getId()
+          'name' => 'Roupas',
+          'url_key' => 'roupas_koala',
+          'is_active' => true,
+          'is_anchor' => true,
+          'include_in_menu' => true,
+          'display_mode' => 'PRODUCTS_AND_PAGE',
+          'parent_id' =>$parentCategory->getId()
         ];
+
         return $categories;
     }
 
     /**
-     * Method for create subcategorie Coisas
-     *
      * @return array
      */
-    private function subcategoriesOfKoalaStore(): array
+    private function categoryShoesBr():array
     {
-        $category = $this->categoryFactory->create();
-        $parentCategory = $category->loadByAttribute('url_key', 'coisas');
+        $parentId = $this->defaultCategoryHelper->getId();
+        $parentCategory = $this->categoryFactory->create();
+        $parentCategory = $parentCategory->load($parentId);
         $categories = [];
+
         $categories[] = [
-            'name' => 'Coisas',
-            'url_key' => 'coisas',
-            'active' => true,
+            'name' => 'Calçados',
+            'url_key' => 'calcados_koala',
+            'is_active' => true,
             'is_anchor' => true,
             'include_in_menu' => true,
             'display_mode' => 'PRODUCTS_AND_PAGE',
-            'is_active' => true,
-            'parent_id' => $parentCategory
+            'parent_id' =>$parentCategory->getId()
         ];
+
+        return $categories;
+    }
+
+    /**
+     * @return array
+     */
+    private function categoryBagsBr():array
+    {
+        $parentId = $this->defaultCategoryHelper->getId();
+        $parentCategory = $this->categoryFactory->create();
+        $parentCategory = $parentCategory->load($parentId);
+        $categories = [];
+
+        $categories[] = [
+            'name' => 'Bolsas e Mochilas',
+            'url_key' => 'bolsas_koala',
+            'is_active' => true,
+            'is_anchor' => true,
+            'include_in_menu' => true,
+            'display_mode' => 'PRODUCTS_AND_PAGE',
+            'parent_id' =>$parentCategory->getId()
+        ];
+
         return $categories;
     }
 }
