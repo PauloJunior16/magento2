@@ -301,11 +301,7 @@ return [
         'Amazon_Core' => 1,
         'Amazon_Login' => 1,
         'Amazon_Payment' => 1,
-<<<<<<< HEAD
         'Doctor_CreateCategories' => 1,
-=======
-        'Doctor_CategoriesAndSubcategories' => 1,
->>>>>>> d301260222d51a70bc3dc2c9230707e83b3f4b44
         'Dotdigitalgroup_Email' => 1,
         'Dotdigitalgroup_Chat' => 1,
         'Klarna_Core' => 1,
@@ -313,11 +309,7 @@ return [
         'Klarna_Kp' => 1,
         'Klarna_Onsitemessaging' => 1,
         'Klarna_KpGraphQl' => 1,
-<<<<<<< HEAD
         'Koala_CreateCategories' => 1,
-=======
-        'Koala_CreateSampleProduct' => 1,
->>>>>>> d301260222d51a70bc3dc2c9230707e83b3f4b44
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'Temando_ShippingRemover' => 1,

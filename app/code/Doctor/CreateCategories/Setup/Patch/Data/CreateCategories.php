@@ -104,7 +104,7 @@ class CreateCategories implements DataPatchInterface
         $categories = [];
 
         $categories[] = [
-          'name' => 'Cereais',
+          'name' => 'Cereais e Grãos',
           'url_key' => 'cereais_doctor',
           'is_active' => true,
           'is_anchor' => true,
@@ -127,8 +127,8 @@ class CreateCategories implements DataPatchInterface
         $categories = [];
 
         $categories[] = [
-            'name' => 'Grãos',
-            'url_key' => 'graos_doctor',
+            'name' => 'Castanhas e Frutas Secas',
+            'url_key' => 'frutas_doctor',
             'is_active' => true,
             'is_anchor' => true,
             'include_in_menu' => true,
@@ -150,7 +150,7 @@ class CreateCategories implements DataPatchInterface
         $categories = [];
 
         $categories[] = [
-            'name' => 'Chás',
+            'name' => 'Chás e Ervas',
             'url_key' => 'chas_doctor',
             'is_active' => true,
             'is_anchor' => true,
