@@ -1,8 +1,6 @@
 <?php
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Koala_CreateSampleProduct',
+    'Doctor_CreateCategories',
     __DIR__
 );
-
-?>
