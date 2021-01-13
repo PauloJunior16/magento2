@@ -310,6 +310,7 @@ return [
         'Klarna_Onsitemessaging' => 1,
         'Klarna_KpGraphQl' => 1,
         'Koala_CreateCategories' => 1,
+        'Koala_CreateSampleProduct' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'Temando_ShippingRemover' => 1,
@@ -386,7 +387,7 @@ return [
                 'code' => 'br',
                 'website_id' => '1',
                 'group_id' => '1',
-                'name' => 'Brazilian Portuguese',
+                'name' => 'Português',
                 'sort_order' => '1',
                 'is_active' => '1'
             ],
