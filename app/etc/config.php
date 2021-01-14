@@ -302,6 +302,7 @@ return [
         'Amazon_Login' => 1,
         'Amazon_Payment' => 1,
         'Doctor_CreateCategories' => 1,
+        'Doctor_DataPatchBlock' => 1,
         'Dotdigitalgroup_Email' => 1,
         'Dotdigitalgroup_Chat' => 1,
         'Klarna_Core' => 1,
