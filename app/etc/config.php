@@ -309,6 +309,8 @@ return [
         'Klarna_Kp' => 1,
         'Klarna_Onsitemessaging' => 1,
         'Klarna_KpGraphQl' => 1,
+        'Koala_AddAttributesSet' => 1,
+        'Koala_Attributes' => 1,
         'Koala_CreateCategories' => 1,
         'Koala_CreateSampleProduct' => 1,
         'PayPal_Braintree' => 1,
