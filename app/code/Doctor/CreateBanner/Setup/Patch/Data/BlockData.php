@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Doctor\DataPatchBlock\Setup\Patch\Data;
+namespace Doctor\CreateBanner\Setup\Patch\Data;
 
 use Magento\Cms\Api\BlockRepositoryInterface;
 use Magento\Cms\Model\BlockFactory;
@@ -63,7 +63,7 @@ class BlockData implements DataPatchInterface
         $block = $this->blockFactory->create();
         $block->setTitle('Banner DoctorFit');
         $block->setIdentifier('Banner_DoctorFit');
-        $block->setContent('Teste');
+        $block->setContent('<p><img src="{{media url="wysiwyg/banner_doctorfit.png"}}" alt="" width="1350"></p>');
         $block->setIsActive(true);
 
         $this->blockRepository->save($block);
