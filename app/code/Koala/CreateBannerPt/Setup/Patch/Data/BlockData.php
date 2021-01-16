@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Koala\CMSBlock\Setup\Patch\Data;
+namespace Koala\CreateBannerPt\Setup\Patch\Data;
 
 use Magento\Cms\Api\BlockRepositoryInterface;
 use Magento\Cms\Model\BlockFactory;
@@ -61,14 +61,12 @@ class BlockData implements DataPatchInterface
     {
         /** @var \Magento\Cms\Model\Block $block */
         $block = $this->blockFactory->create();
-        $block->setTitle('Banner Koala Store');
-        $block->setIdentifier('Banner_KoalaStore');
-        $block->setContent('<p><img src="{{media url="wysiwyg/banner_koala.png"}}" alt="" width="1350" height="454"></p>');
+        $block->setTitle('Banner Koala Store pt_br');
+        $block->setIdentifier('Banner_Koala_Store');
+        $block->setContent('<p><img src="{{media url="wysiwyg/banner_koala_ptbr.jpg"}}" alt="" width="1350" height="454"></p>');
         $block->setIsActive(true);
 
         $this->blockRepository->save($block);
-
-
     }
 
     /**

@@ -2,6 +2,6 @@
 
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Doctor_DataPatchBlock',
+    'Doctor_CreateBanner',
     __DIR__
 );
