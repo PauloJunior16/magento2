@@ -1,6 +1,6 @@
 <?php
 
-namespace Koala\CoreConfigurator\Setup\Patch\Data;
+namespace Doctor\CoreConfigurator\Setup\Patch\Data;
 
 use Exception;
 use Magento\Framework\App\Config\ScopeConfigInterface;
