@@ -41,6 +41,26 @@ module.exports = {
         ],
         dsl: 'less'
     },
+    koala: {
+        area: 'frontend',
+        name: 'Magento/Koala',
+        locale: 'pt_BR',
+        files: [
+            'css/styles-m',
+            'css/styles-l'
+        ],
+        dsl: 'less'
+    },
+    doctor: {
+        area: 'frontend',
+        name: 'Magento/Doctor',
+        locale: 'pt_BR',
+        files: [
+            'css/styles-m',
+            'css/styles-l'
+        ],
+        dsl: 'less'
+    },
     backend: {
         area: 'adminhtml',
         name: 'Magento/backend',
