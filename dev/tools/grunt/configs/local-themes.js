@@ -41,9 +41,9 @@ module.exports = {
         ],
         dsl: 'less'
     },
-    koala: {
+    koalastore: {
         area: 'frontend',
-        name: 'Magento/Koala',
+        name: 'Magento/KoalaStore',
         locale: 'pt_BR',
         files: [
             'css/styles-m',
@@ -51,9 +51,9 @@ module.exports = {
         ],
         dsl: 'less'
     },
-    doctor: {
+    doctorfit: {
         area: 'frontend',
-        name: 'Magento/Doctor',
+        name: 'Magento/DoctorFit',
         locale: 'pt_BR',
         files: [
             'css/styles-m',
