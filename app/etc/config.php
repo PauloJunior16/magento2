@@ -316,6 +316,7 @@ return [
         'Koala_CreateBanner' => 1,
         'Koala_CreateBannerPt' => 1,
         'Koala_CreateCategories' => 1,
+        'Koala_Maps' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'Temando_ShippingRemover' => 1,
