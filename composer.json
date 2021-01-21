@@ -15,7 +15,8 @@
         "frenet/frenet-magento2": "^2.2",
         "magento/composer-root-update-plugin": "~1.0",
         "magento/product-community-edition": "2.4.1",
-        "rafaelstz/traducao_magento2_pt_br": "dev-master"
+        "rafaelstz/traducao_magento2_pt_br": "dev-master",
+        "ricardomartins/pagseguro": "dev-master"
     },
     "autoload": {
         "exclude-from-classmap": [
