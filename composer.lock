@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f686f74b69dae8d073adb2551e9053e6",
+    "content-hash": "14087e95884efb2807e9ea6c7e42e0c5",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -17285,6 +17285,50 @@
             "time": "2020-05-12T15:16:56+00:00"
         },
         {
+            "name": "ricardomartins/pagseguro",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/r-martins/PagSeguro-Magento-Transparente-M2.git",
+                "reference": "ba15210f19603c6607bc6d0fd9f3f6cd2cc0a7f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/r-martins/PagSeguro-Magento-Transparente-M2/zipball/ba15210f19603c6607bc6d0fd9f3f6cd2cc0a7f0",
+                "reference": "ba15210f19603c6607bc6d0fd9f3f6cd2cc0a7f0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-iconv": "*",
+                "ext-json": "*",
+                "ext-libxml": "*",
+                "ext-mbstring": "*",
+                "ext-simplexml": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "RicardoMartins\\PagSeguro\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Ricardo Martins",
+                    "email": "pagseguro-transparente@ricardomartins.net.br"
+                }
+            ],
+            "description": "Magento 2 Transparent Payment Module / PagSeguro Transparente para Magento 2",
+            "time": "2021-01-15T07:56:08+00:00"
+        },
+        {
             "name": "seld/jsonlint",
             "version": "1.8.3",
             "source": {
@@ -25459,7 +25503,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "rafaelstz/traducao_magento2_pt_br": 20
+        "rafaelstz/traducao_magento2_pt_br": 20,
+        "ricardomartins/pagseguro": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
