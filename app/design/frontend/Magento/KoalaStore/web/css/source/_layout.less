@@ -4,12 +4,22 @@
         overflow-x: hidden;
     }
     .header {
+        background: #000000;
+    }
+    .footer .page-footer{
         background: #cfcfcf;
     }
+    .text-retirada{
+        font-weight: bolder;
+    }
+    
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .header {
         background: #9cebe7;
+    }
+    .footer .page-footer{
+        background: #cfcfcf;
     }
 }
