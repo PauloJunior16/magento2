@@ -60,6 +60,6 @@ $ php bin/magento setup:install
 
 **Ative o Elasticsearch**
 
-sudo service elasticsearch start
+$ sudo service elasticsearch start
 
 
