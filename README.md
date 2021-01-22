@@ -25,7 +25,7 @@ Em andamento.
 
 $ git clone https://github.com/pjcesar-dev/magento2.git <NOME DA PASTA>
 
-**Instale o composer:**
+**Instale as dependências via composer:**
 $ composer install
 
 **Crie uma nova database no MYSQL:**
