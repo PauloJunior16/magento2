@@ -11,12 +11,55 @@ MySQL 8.0,
 PHP 7.4,
 Nginx 1.18
 Grunt-cli 1.3.2
-
-## Sprints
-Sprints 13, 14 e 15
+Composer 1.10.19
 
 ## Autores do projeto
 Gustavo Menezes, Karen Avelar e Paulo Junior.
 
 ## Status
 Em andamento.
+
+## Instalação
+
+**Clone o repositório:**
+
+$ git clone https://github.com/pjcesar-dev/magento2.git <NOME DA PASTA>
+
+**Instale as dependências via composer:**
+$ composer install
+
+**Crie uma nova database no MYSQL:**
+
+$ mysql -u root -p
+
+$ show databases;
+
+$ create database <NOME DA DATABASE> default character set utf8 default collate utf8_general_ci;
+    
+$ show databases;
+    
+**Faça a instalação, a conexão entre o magento e a database:**
+
+$ php bin/magento setup:install 
+--base-url=http://<nomedaloja>.magento2.localhost \
+	--db-host=localhost \
+	--db-name=magento \
+	--db-user=magento \
+	--db-password=magento \
+	--backend-frontname=admin \
+	--admin-firstname=admin \
+	--admin-lastname=admin \
+	--admin-email=admin@admin.com \
+	--admin-user=admin \
+	--admin-password=admin123 \
+	--language=pt_BR \
+	--currency=BRL \
+	--timezone=America/Sao_Paulo \
+	--use-rewrites=1
+
+
+**Ative o Elasticsearch**
+
+sudo service elasticsearch start
+
+
