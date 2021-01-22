@@ -45,28 +45,29 @@ class CreateAttributes implements DataPatchInterface, PatchRevertableInterface
             self::ATTRIBUTE_CODE,
             [
                 'type' => 'text',
-                'label' => 'Koala_Product',
+                'label' => 'Koala Product',
                 'input' => 'select',
                 'source' => '',
                 'frontend' => '',
                 'required' => false,
                 'backend' => '',
-                'sort_order' => '30',
-                'global' => ScopedAttributeInterface::SCOPE_GLOBAL,
+                'sort_order' => '81',
+                'global' => ScopedAttributeInterface::SCOPE_WEBSITE,
                 'default_value' => null,
                 'visible' => true,
                 'user_defined' => true,
                 'searchable' => false,
                 'filterable' => true,
                 'comparable' => false,
-                'visible_on_front' => false,
+                'visible_on_front' => true,
                 'unique' => false,
                 'apply_to' => $productTypes,
-                'group' => 'Koala Store',
+                'group' => 'General',
                 'used_in_product_listing' => false,
                 'is_used_in_grid' => true,
                 'is_visible_in_grid' => true,
                 'is_filterable_in_grid' => true,
+                'attribute_code' => 'clothing',
                 'option' => [
                     'value' => [
                         'option_1' => ['Pants'],
@@ -81,6 +82,49 @@ class CreateAttributes implements DataPatchInterface, PatchRevertableInterface
                         'option_3' => 3,
                         'option_4' => 4,
                         'option_5' => 5
+                    ],
+                ]
+            ]
+        );
+
+        $eavSetup->addAttribute(
+            \Magento\Catalog\Model\Product::ENTITY,
+            'fashion',
+            [
+                'type' => 'text',
+                'label' => 'Fashion Style',
+                'input' => 'select',
+                'source' => '',
+                'frontend' => '',
+                'required' => false,
+                'backend' => '',
+                'sort_order' => '82',
+                'global' => ScopedAttributeInterface::SCOPE_WEBSITE,
+                'default_value' => null,
+                'visible' => true,
+                'user_defined' => true,
+                'searchable' => false,
+                'filterable' => true,
+                'comparable' => false,
+                'visible_on_front' => true,
+                'unique' => false,
+                'apply_to' => $productTypes,
+                'group' => 'General',
+                'used_in_product_listing' => false,
+                'is_used_in_grid' => true,
+                'is_visible_in_grid' => true,
+                'is_filterable_in_grid' => true,
+                'attribute_code' => 'fashion',
+                'option' => [
+                    'value' => [
+                        'option_1' => ['Street Wear'],
+                        'option_2' => ['Sports Wear'],
+                        'option_3' => ['Casual Wear']
+                    ],
+                    'order' => [
+                        'option_1' => 1,
+                        'option_2' => 2,
+                        'option_3' => 3,
                     ],
                 ]
             ]
