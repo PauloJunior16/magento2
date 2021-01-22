@@ -31,11 +31,14 @@ $ composer install
 **Crie uma nova database no MYSQL:**
 
 $ mysql -u root -p
+
 $ show databases;
+
 $ create database <NOME DA DATABASE> default character set utf8 default collate utf8_general_ci;
+    
 $ show databases;
     
-**Faça a conexão entre o magento e a database:**
+**Faça a instalação, a conexão entre o magento e a database:**
 
 $ php bin/magento setup:install 
 --base-url=http://<nomedaloja>.magento2.localhost \
@@ -49,9 +52,9 @@ $ php bin/magento setup:install
 	--admin-email=admin@admin.com \
 	--admin-user=admin \
 	--admin-password=admin123 \
-	--language=en_US \
-	--currency=USD \
-	--timezone=America/Chicago \
+	--language=pt_BR \
+	--currency=BRL \
+	--timezone=America/Sao_Paulo \
 	--use-rewrites=1
 
 
