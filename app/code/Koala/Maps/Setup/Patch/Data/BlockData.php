@@ -63,7 +63,7 @@ class BlockData implements DataPatchInterface
         $block = $this->blockFactory->create();
         $block->setTitle('Maps Koala Store');
         $block->setIdentifier('Maps_Koala_Store');
-        $block->setContent('<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14626.181601914159!2d-46.6711879!3d-23.5847652!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe2c327cf0bc2f68c!2sWebjump%20Design%20em%20Inform%C3%A1tica!5e0!3m2!1spt-BR!2sbr!4v1611249191345!5m2!1spt-BR!2sbr" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>');
+        $block->setContent('<p><iframe style="border: 0;" tabindex="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14626.181601914159!2d-46.6711879!3d-23.5847652!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe2c327cf0bc2f68c!2sWebjump%20Design%20em%20Inform%C3%A1tica!5e0!3m2!1spt-BR!2sbr!4v1611249191345!5m2!1spt-BR!2sbr" width="1270" height="300" frameborder="0" allowfullscreen="allowfullscreen" aria-hidden="false"></iframe></p>');
         $block->setIsActive(true);
 
         $this->blockRepository->save($block);
